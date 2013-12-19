@@ -30,14 +30,27 @@ module EnvelopeOperate
   Release = 5
   
   A = 1
-  P = 2  
-  D = 3  
-  S = 4  
+  P = 2
+  D = 3
+  S = 4
   R = 5
   
   def self.name(value)
     EnvelopeOperate.constants.find {|name|
       EnvelopeOperate.const_get(name) == value
+    }
+  end
+end
+
+module StepWaveformOperate
+  FreqFactor = 0x0000
+  Begin = 0x0001
+  End = 0x0002
+  Queue = 0x0003
+  
+  def self.name(value)
+    StepWaveformOperate.constants.find {|name|
+      StepWaveformOperate.const_get(name) == value
     }
   end
 end
