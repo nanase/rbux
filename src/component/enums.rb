@@ -34,5 +34,11 @@ module EnvelopeOperate
   D = 3  
   S = 4  
   R = 5
+  
+  def self.name(value)
+    EnvelopeOperate.constants.find {|name|
+      EnvelopeOperate.const_get(name) == value
+    }
+  end
 end
 
