@@ -31,6 +31,12 @@ class StepWaveform
   def reset
     self.setStep [0]
   end
+
+  def attack
+  end
+
+  def release(time)
+  end
   
   def getWaveform(data, frequency, phase, sampleTime, count)
      count.time do |i|
